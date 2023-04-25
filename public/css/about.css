@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.section{
+    width: 100%;
+    height: 87vh;
+    background: url(../images/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    width: 80%;
+    display: block;
+    margin: 0px auto;
+    padding: 50px 0;
+}
+.container .title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.container .title h1{
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #88941e;
+}
+.container .title h1::after{
+    content: "";
+    height: 5px;
+    width: 100px;
+    background-color: #c4d156;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+}
+
+.content{
+    float: left;
+    width: 55%;
+    margin-top: 55px;
+}
+.img-section{
+    float: right;
+    width: 40%;
+}
+.img-section img{
+    width: 100%;
+    height: 284px;
+}
+.content .airticle h3{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 45px;
+}
+.content .airticle h3:hover:after{
+    content: "";
+    width: 100px;
+    height: 3px;
+    background-color: aliceblue;
+    border-radius: 25px;
+    display: block;
+    margin-left: 25px;
+}
+.content .airticle span,
+.content .airticle h4{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+.container .social{
+    width: 100%;
+    clear: both;
+    margin-top: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.container .social i{
+    color: #fff;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    line-height: 45px;
+    text-align: center;
+    background-color: #f28f92;
+    margin: 0px 5px;
+}
+.container .social  i:hover{
+    color: #fff;
+    background-color: #88941e;
+    transform: rotate(360deg);
+    transition: 1s ease;
+}
+
+.visePresident{
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    height: 125vh;
+}
+.visePresident .container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 80%;
+}
+.visePresident .container img{
+    height: 284px;
+    width: 100%;
+}
+
+
+.visePresident1, 
+.visePresident2,
+.visePresident3{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.mySwiper{
+    margin: 10px;
+    margin-left: 32px;
+
+}
+.swiper {
+    width:97%;
+    height: 45vh;
+    /* background: #eee; */
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    /* color: #000; */
+    margin: 0;
+    padding: 0;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 60%;
+  }
+
+
+
+
+                         /* responsive */
+@media (max-width:922px) {
+
+    .footer .footer-1 div{
+        padding: 0px 0px;
+    }
+}
