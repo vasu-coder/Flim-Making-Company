@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/membership.css" />
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/58af90a224.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+</head>
+<body>
+    {{>navbar}}
+     <div class="membershipBanner"></div>
+    <div class="memberWork">
+        <div class="Note1">
+            <p>
+                <span>Important To know First:</span>
+                The membership of the trust is open to any person who has attained the
+                age of maturity and fulfills the terms & condition of the trust (framed
+                by the board of trustee from time to time) but subject to the approval
+                of the board of Trustee. The Membership fee and the subscription shall
+                be as under unless otherwise revised by the Board of Trustee from time
+                to time.
+            </p>
+        </div>
+       <div class="TypesOfMember">
+           <span class="HeadlineOfMember">The Trust shall have following categories of members: </span>
+           <br>
+           <ul class="memberList">
+               <li>Ordinary Members</li>
+               <li>Nominal/Associate Members</li>
+            </ul>
+            <p class="ordinaryMember">
+                <span>Ordinary Members : </span> A person who contributes prescribed fee
+                as membership fees resides within the area of operation of the trust
+                having genuine needs and spirit to provide voluntary or selfless
+                services and whose interest does not conflict with the interest of the
+                trust; No right of membership shall be exercisable until a person has
+                made such payments to the trust in respect of membership or acquitted
+                such interest in the trust as may be prescribed by the trust or by
+                passing appropriate resolution
+            </p>
+            <br>
+            <p class="nominalMember">
+                <span>Nominal/Associate Member : </span>Trust may , In the interest of the
+                trust, admit a person as nominal members or associate member.
+            </p>
+            <div class="workAssigned">
+                <h3>Responsibility As a Member</h3>
+                <ul>
+                    <li><p>Right to participate in the assigned project and activities/works of the trust.</p></li>
+                    <li><p>Right to request before the board of trust to be a member of the committee or sub-committee of the trust. </p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="termsAndCondition">
+            <p>
+                <span>NOTE : </span>If the membership is not approved by the Board of
+                Trustee, the reason of refusal shall be communicated to the
+                persons/applicant concerned.
+            </p>
+        </div> 
+
+        <button class="membershipButton" type="submit">Get Membership</button>
+
+    </div>
+    {{>footer}}
+</body>
+</html>

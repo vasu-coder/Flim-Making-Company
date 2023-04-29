@@ -1,0 +1,87 @@
+.membershipBanner{
+    background-image: url(../images/Blue\ Pink\ Gradient\ Fashion\ Banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100%;
+}
+.memberWork{
+    height: 95vh;
+    width: 100%;
+}
+.Note1{
+   margin: 44px 114px; 
+   line-height: 1.5;
+}
+.Note1 span{
+    color: rgb(236, 48, 48);
+    font-size: 20px;
+    font-weight: 700;
+}
+.TypesOfMember{
+    margin: 10px 65px;
+}
+.TypesOfMember p{
+    line-height: 1.5;
+}
+.HeadlineOfMember{
+    font-size: 25px;
+    font-weight: 700;
+}
+.memberList{
+    margin: 10px;
+    margin-left: 40px;
+    line-height: 2;
+}
+.ordinaryMember span{
+    font-size: 25px;
+    font-weight: 700;
+}
+.ordinaryMember p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.nominalMember span{
+    font-size: 25px;
+    font-weight: 700;
+}
+.nominalMember {
+    font-size: 18px;
+    font-weight: 500;
+}
+.workAssigned h3{
+    font-size: 25px;
+    margin: 10px 0px 6px 0px;
+}
+.workAssigned ul{
+    margin: 8px 18px;
+    font-size: 19px;
+}
+.termsAndCondition {
+    text-align: center;
+    margin-top: 32px;
+}
+.termsAndCondition span{
+    font-weight: 700;
+    font-size: 25px;
+    color: #cd1515;
+}
+.termsAndCondition p{
+    font-size: 20px;   
+}
+.membershipButton{
+    margin-left: 44%;
+    margin-top: 25px;
+    padding: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #cd1515;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.membershipButton:hover{
+    padding: 10px 10px;
+
+}
