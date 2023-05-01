@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Roboto+Slab:wght@300&family=Ysabeau:wght@200&display=swap');
 html{
-    font-family: "Poppins", sans-serif;
+    font-family: serif;
 }
 .body{
     flex-direction: column;
@@ -18,7 +19,7 @@ html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: serif;
 }
 
 /* body{
@@ -178,6 +179,12 @@ html{
     margin: 6px;
   }
 }
+@media (max-width:922px) {
+
+  .footer .footer-1 div{
+      padding: 0px 0px;
+  }
+}
 
 @media (max-width: 420px){
   .img-slider{
@@ -210,7 +217,6 @@ html{
   }
 }
 .mission{
-   
     margin: 30px;
     background-color: rgb(255, 255, 255);
     box-shadow: 3px 3px 15px 5px #757575;
@@ -218,7 +224,10 @@ html{
     border-radius: 10px;
     
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@500&display=swap');
+
 .mission-heading h1{
+    font-family: Roboto serif;
     text-align: center;
     font-size: 30px;
     padding-top: 10px;
@@ -239,7 +248,8 @@ html{
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 :root{
     
-    --box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    /* --box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+    ---box-shadow:box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 0px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     --green:#27ae60;
     --black:#192a56;
     --light-color:#666;
@@ -253,33 +263,36 @@ html{
                                            /* header styling */
 
 header{
-    box-shadow: var(--box-shadow);
-    z-index: 1000;
-    padding: 12px 45px;
+  z-index: 1000;
+  padding: 12px 45px;
+
 }
 
 header nav{
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    box-shadow: 3px 3px 15px 5px #757575;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    background-color: #FFF;
+    background-color: #000000;
+}
+.logo img{
+  /* background-image: url(images/logo.jpg); */
+  height: 90px;
+  width: 90px;
 }
 
-nav .logo a{
-    text-decoration: none;
-    color: var(--light-color);
-    margin-left: 20px;
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-nav .links a{
+  
+  nav .links a{
+    font-family: ysabeau;
+    font-weight: 700;
     text-decoration: none;
     color: var(--light-color);
     font-size: 1.2rem;
     margin: 13px;
-
+    
 }
 nav .links a:hover{
     cursor: pointer;
@@ -288,13 +301,14 @@ nav .links a:hover{
     color: #fff;
     background-color: #27ae60;
     transition: .3s   
-}
-
-nav .membership a{
+  }
+  
+  nav .membership a{
     text-decoration: none;
+    font-family: roboto slab;
     color: var(--light-color);
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: bold;
     margin-right: 30px;
 }
 nav .membership a:hover{
@@ -327,6 +341,10 @@ nav .membership a:hover{
 }
 .footer .footer-1 div h3{
     padding: 20px 20px;
+    font-weight: 700;
+}
+.footer .footer-1 .fQuery h3{
+    padding: 20px 20px 20px 0px;
     font-weight: 700;
 }
 .FlinkList ul{
@@ -380,6 +398,11 @@ nav .membership a:hover{
         padding: 0px 0px;
     }
 }
+@media (max-width:860px) {
+  .nav .membership a{
+    margin-right: 20px;
+  }
+}
 @media (max-width:855px) {
     header{
         padding: 12px 20px;
@@ -395,10 +418,13 @@ nav .membership a:hover{
     }
 }
 
-@media (max-width:670px) {
-    .footer .footer-1 div{
-        padding: 0px 0px;
-    }
+@media (max-width:675px) {
+  .footer .footer-1 div{
+    padding: 0px 0px;
+  }
+}
+@media (max-width:752px) {
+
     .membership i{
         display: inline-block;
     }
@@ -433,7 +459,7 @@ nav .membership a:hover{
     }
 }
 
-@media (max-width:557px) {
+@media (max-width:570px) {
     .footer .footer-1 {
         justify-content: none;
     }
@@ -448,7 +474,7 @@ nav .membership a:hover{
     }
 }
 
-@media (max-width:484px) {
+@media (max-width:487px) {
     .footer .footer-1 div {
         width: 50%;
     }
