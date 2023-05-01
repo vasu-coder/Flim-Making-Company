@@ -19,7 +19,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Document</title>
+    <title>{{title}}</title>
 </head>
 <body>
     {{>navbar}}
@@ -36,6 +36,13 @@
         <img src="images/eventphoto/{{this.imagename}}" alt="img">
       </div>
     {{/each}}
+    <div class="gallery_item camera">
+        <img src="images/eventphoto/event1.jpg" alt="img">
+      </div>
+      <div class="gallery_item camera">
+        <img src="images/eventphoto/event2.jpg" alt="img">
+      </div>
+      
     </div>
     <!-- Lightbox -->
     <div class="lightbox">

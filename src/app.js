@@ -19,7 +19,8 @@ const Photo = require("./models/eventphoto");
 const { rmSync } = require("fs");
 const app =express();
 const port =process.env.PORT || 3000;
-const admin_route = require("./models/adminroute")
+const admin_route = require("./models/adminroute");
+const { title } = require('process');
 
 const staticpath = path.join(__dirname,"../public");
 const viewpath = path.join(__dirname,"../templates/views");
@@ -53,16 +54,16 @@ const auth = (Permissions)=>{
 
 // routing
 app.get("/",(req,res)=>{
-    res.render("index");
+    res.render("index",{title:"TFFT"});
 
 })
 
 app.get("/contact",(req,res)=>{
-    res.render("contact",{success:''});
+    res.render("contact",{success:'',title:"TFFT"});
 
 })
 app.get("/admin",(req,res)=>{
-    res.render("admin");
+    res.render("admin",{title:"TFFT"});
 
 })
 // app.get("/admin/*",(req,res)=>{
@@ -73,7 +74,7 @@ app.get("/admincontact",authi,(req,res)=>{
     console.log(`this the auth cookie ${req.cookies.jwt}`);
     User.find({}).sort({date:-1})
     .then((records)=>{
-        res.render("admincontact",{records});
+        res.render("admincontact",{records,title:"TFFT"});
     })
     .catch((err)=>{
         console.log(err)
@@ -108,7 +109,7 @@ app.post("/admin",async(req,res)=>{
         
         const ismatch =  await bycrpt.compare(password,usermail.password);
         const token= await usermail.generateAuthToken();
-        console.log(token);
+        // console.log(token);
         res.cookie("jwt",token,{
             expires:new Date(Date.now()+ 600000),
             httpOnly:true
@@ -129,35 +130,44 @@ app.post("/admin",async(req,res)=>{
 })
 
 app.get("/about",(req,res)=>{
-    res.render("about");
+    res.render("about",{title:"TFFT"});
 
 })
 app.get("/membership",(req,res)=>{
-    res.render("member");
+    res.render("member",{title:"TFFT"});
 
 })
-// app.post("/admin", async(req,res)=>{
-//     try{
-//         const data =new Login(req.body);
-//         console.log(data);
-//         const token= await data.generateAuthToken();
-//         console.log(token);
-// res.cookie("jwt",token,{
-//     expires:new Date(Date.now()+ 600000),
-//     httpOnly:true
-// });
-//         await data.save();
-        
-//         res.status(201).send("done");
-        
-    
-  
-//       }
-//     catch(error){
-//         res.status(500).send(error)
-//     }
+app.get("/register",(req,res)=>{
+    res.render("register",{title:"TFFT"});
 
-// })
+})
+app.post("/register", async(req,res)=>{
+    try{
+        const code = req.body.code;
+        if(code==="tff123"){
+        const data =new Login(req.body);
+        console.log(data);
+        const token= await data.generateAuthToken();
+        // console.log(token);
+res.cookie("jwt",token,{
+    expires:new Date(Date.now()+ 600000),
+    httpOnly:true
+});
+        await data.save();
+        
+        res.status(201).send("done");
+
+}
+else{
+    res.send(" Invalid Details");
+}
+  
+      }
+    catch(error){
+        res.status(500).send(error)
+    }
+
+})
 
 
 
@@ -166,7 +176,7 @@ app.post("/adminevent",Upload,function (req,res){
     const imagedata = Photo.find({}).sort({date:-1});
     const imageFile = req.file.filename;
     const success = req.file.filename + " upload sucessfully"
-    console.log(`this the auth cookie ${req.cookies.jwt}`);
+    // console.log(`this the auth cookie ${req.cookies.jwt}`);
     console.log(success);
     const imagedetail = new Photo({
         imagename:imageFile
@@ -183,14 +193,14 @@ catch(err){
 })
 
 app.get("/adminevent",authi,(req,res)=>{
-    res.render('adminevent')
+    res.render('adminevent',{title:"TFFT"})
 })
 
 app.get("/event",(req,res)=>{
    
         Photo.find({}).sort({date:-1})
         .then((records)=>{
-            res.render('event',{records});
+            res.render('event',{records,title:"TFFT"});
         })
         .catch((err)=>{
             console.log(err)
