@@ -55,7 +55,9 @@ html{
 .img-slider .slide img{
   z-index: 1;
   width: 100%;
+  height: 500px;
   border-radius: 5px;
+  
 }
 
 .img-slider .slide .info{
@@ -110,7 +112,13 @@ html{
     height: 375px;
     margin-right: 10px;
   }
-
+  .img-slider .slide img{
+    z-index: 1;
+    width: 100%;
+    height: 375px;
+    border-radius: 5px;
+    
+  }
   .img-slider .slide .info{
     padding: 10px 25px;
   }
@@ -140,11 +148,17 @@ html{
     width: 100%;
     height: 250px;
   }
-
+  
   .img-slider .slide .info{
     padding: 10px 20px;
   }
-
+  .img-slider .slide img{
+    z-index: 1;
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    
+  }
   .img-slider .slide .info h2{
     font-size: 30px;
   }
@@ -169,6 +183,13 @@ html{
   .img-slider{
     width: 100%;
     height: 200px;
+  }
+  .img-slider .slide img{
+    z-index: 1;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    
   }
 
   .img-slider .slide .info{
@@ -289,7 +310,7 @@ nav .membership a:hover{
 
 .footer{
     display: flex;
-    flex-direction: column;
+      flex-direction: column;
     justify-content: space-between;
     width: 100%;
     background-color: black;

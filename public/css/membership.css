@@ -85,3 +85,46 @@
     padding: 10px 10px;
 
 }
+
+
+  
+  button {
+    padding: 10px;
+    font-size: 1.1em;
+    background: #32bacf;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  #modal-overlay {
+    width: 100%;
+    height: 100vh;
+   margin-top: 0px;
+   position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+  
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  #modal-overlay #modal {
+    max-width: 650px;
+    width: 100%;
+    background: white;
+    height: 550px;
+  
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+  }
+  
+  #modal-overlay #modal .modal-footer {
+    margin-top: auto;
+  }

@@ -22,8 +22,39 @@
     <title>Document</title>
 </head>
 <body>
-    {{>navbar}}
+    {{>navbar}}<div>
+      
      <div class="membershipBanner"></div>
+     <div id="modal-overlay">
+  <div id="modal">
+
+    <div class="modal-header">
+      <h2>Membership Fee Detail:</h2>
+    </div>
+
+    <div class="modal-content">
+      
+<p>For Indian Citizens:</p>
+<p>One Time Registration Fee 500 ₹</p>
+<p>One Year Membership Fee 1500₹</p>
+<p>For NRIs and Foreigners:</p>
+<p>One Time Registration Fee 20$ or 20€ or 20£</p>
+<p>One Year Membership Fee 60$ or 60€ or 60£</p>
+<p><b>Fee Payment can be made to the account of THE FILM FOUNDATION TRUST, Punjab National Bank, South Extension, Part-1, New Delhi. <br>C/ AC’s No: 0176002100258358 , IFSC: PUNB0017600</b></p>
+<h5><b>Important To Know</b></h5>
+<p><b>After the payment all members must have to fill the google form for payment verification which is present below</b></p>
+
+    </div>
+
+    <div class="modal-footer">
+      <button id="close-modal">Close</button>
+      <button ><a href="https://docs.google.com/forms/d/e/1FAIpQLSc5Pd__CWekS61a1YEFqxFKtIjBP9Y1KtAUUOrAD6n2so8VMQ/viewform?usp=pp_url" style="text-decoration: none;
+      color:rgb(255, 255, 255);">Google Form</a></button>
+    </div>
+
+  </div>
+</div>
+      
     <div class="memberWork">
         <div class="Note1">
             <p>
@@ -74,9 +105,43 @@
             </p>
         </div> 
 
-        <button class="membershipButton" type="submit">Get Membership</button>
+        <button id= "membershipButton"class="membershipButton" >Get Membership</button>
+
+       
 
     </div>
+    </div>
     {{>footer}}
+    <script >
+    const openModalButton = document.getElementById("membershipButton");
+const modalWindowOverlay = document.getElementById("modal-overlay");
+
+const showModalWindow = () => {
+  modalWindowOverlay.style.display = 'flex';
+}
+openModalButton.addEventListener("click", showModalWindow);
+
+// Hide Modal
+const closeModalButton = document.getElementById("close-modal");
+
+const hideModalWindow = () => {
+    modalWindowOverlay.style.display = 'none';
+}
+
+closeModalButton.addEventListener("click", hideModalWindow);
+
+
+// Hide On Blur
+
+const hideModalWindowOnBlur = (e) => {
+
+    if(e.target === e.currentTarget) {
+      console.log(e.target === e.currentTarget)
+        hideModalWindow();
+    }
+}
+
+modalWindowOverlay.addEventListener("click", hideModalWindowOnBlur)</script>
+<script src="js/navbar.js"></script>
 </body>
 </html>
