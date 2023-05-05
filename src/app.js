@@ -204,11 +204,7 @@ app.get("/event",(req,res)=>{
         })
         .catch((err)=>{
             console.log(err)
-        })
-        
-    
-    
-    
+        });
 })
 
 
